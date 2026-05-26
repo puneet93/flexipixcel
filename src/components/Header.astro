@@ -1,0 +1,68 @@
+---
+import logo  from "../assets/header-logo.png";
+import { Navbar } from 'astro-bootstrap';
+import type { NavbarItemType } from 'astro-bootstrap';
+
+const items: NavbarItemType[] = [
+  { text: 'Services', href: '#services' },
+  { text: 'Our Work', href: '#work' },
+  { text: 'How It Works', href: '#works' },
+  { text: 'Pricing', href: '#plans' },
+  { text: 'FAQ', href: '#frequently' },
+];
+
+const id = 'navbarDemo';
+---
+
+<Navbar class="navbar-expand-lg fixed-top smart-scroll">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src={logo.src} alt="logo" /></a>
+    <Navbar.Toggler controls={id} />
+    <Navbar.Collapse {id}>
+      <Navbar.Items {items} class="mx-auto mb-2 mb-lg-0" />
+
+      <div class="navbar-control">
+        <a href="#" class="btn btn-sm rounded-pill btn-lightBlue text-uppercase">login</a>
+        <a href="#" class="btn btn-sm rounded-pill btn-red text-uppercase">Get Started</a>
+      </div>
+    </Navbar.Collapse>
+  </div>
+</Navbar>
+
+<style>
+  .navbar-control{
+    display: flex;
+    gap: 14px;
+  }
+
+  /* Initial state: transparent */
+  .smart-scroll {
+    transition: all 0.3s ease-in-out;
+    background-color: transparent; 
+  }
+
+  /* Scrolled state applied via JS */
+  .smart-scroll.scrolled {
+    padding: 20px 0;
+    background-color: #121d46; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<script>
+  const updateNavbar = () => {
+    // Target the element using its unique class name instead of an ID
+    const nav = document.querySelector('.smart-scroll');
+    if (!nav) return;
+    
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  };
+
+  // Run on scroll and initial load
+  window.addEventListener('scroll', updateNavbar);
+  updateNavbar();
+</script>

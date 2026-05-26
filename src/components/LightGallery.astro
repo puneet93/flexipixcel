@@ -1,0 +1,68 @@
+---
+// Keep the CSS import in the frontmatter
+import 'lightgallery/css/lightgallery.css';
+---
+
+<div id="lightgallery" class="d-none">
+    <a href="https://picsum.photos/id/1015/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 1" src="https://picsum.photos/id/1015/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1016/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 2" src="https://picsum.photos/id/1016/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1018/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 3" src="https://picsum.photos/id/1018/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1019/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 4" src="https://picsum.photos/id/1019/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1020/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 5" src="https://picsum.photos/id/1020/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1021/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 6" src="https://picsum.photos/id/1021/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1022/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 7" src="https://picsum.photos/id/1022/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1023/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 8" src="https://picsum.photos/id/1023/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1024/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 9" src="https://picsum.photos/id/1024/200/150" />
+    </a>
+    <a href="https://picsum.photos/id/1025/1600/1200" data-lg-size="1600-1200">
+        <img alt="Work 10" src="https://picsum.photos/id/1025/200/150" />
+    </a>
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+    <a href="#" id="open-gallery-btn" class="btn btn-xl rounded-pill btn-blue">Our work</a>
+</div>
+
+<script>
+    // JS import remains in the client-side script tag
+    import lightGallery from 'lightgallery';
+
+    const galleryElement = document.getElementById('lightgallery');
+    const openButton = document.getElementById('open-gallery-btn');
+    
+    if (galleryElement && openButton) {
+        // Initialize lightGallery on the hidden container
+        lightGallery(galleryElement, {
+            speed: 500,
+            download: false
+        });
+
+        // Listen for the button click
+        openButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevents the page from jumping to the top due to href="#"
+            
+            // Programmatically click the first image in the hidden gallery to trigger the popup
+            const firstImage = galleryElement.querySelector('a');
+            if (firstImage) {
+                firstImage.click();
+            }
+        });
+    }
+</script>

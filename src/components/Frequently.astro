@@ -1,0 +1,79 @@
+---
+const data: AccordionDataType[] = [
+  { header: 'How fast will I receive my designs?', body: 'Most standard graphic production tasks (like social media ads, print assets, or ad banners) are delivered within 24 to 48 hours. For larger, strategic design scopes like a full high-converting landing page layout, execution takes up to 72 hours to ensure premium structural alignment.', show: true },
+  { header: 'How does onboarding work?', body: 'Text block 2' },
+  { header: 'Why do you limit your active client capacity?', body: 'Text block 3' },
+  { header: 'Is there a limit to how many requests I can make?', body: 'Text block 3' },
+  { header: 'What if I don’t like the design?', body: 'Text block 3' },
+  { header: 'Are there any requests you don’t support?', body: 'Text block 3' },
+  { header: 'How does the "cancel anytime" clause work?', body: 'Text block 3' },
+  { header: 'Are there any refunds?', body: 'Text block 3' },
+];
+
+import { Accordion } from 'astro-bootstrap';
+import type { AccordionDataType } from 'astro-bootstrap';
+---
+
+<div class="faq" id="frequently">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="heading">
+					<h6 class="text-uppercase">QUESTIONS & ANSWERS</h6>
+					<h2>Frequently Asked Questions.</h2>
+				</div>
+				<!-- /.heading -->
+			</div>
+			<!-- /.col-lg-6 -->
+			<div class="col-lg-6">
+				<Accordion data={data} class='accordion-list' />
+				<p class="note">Still have questions? Reach out and <a href="#">ask us directly</a>.</p>
+				<!-- /.note -->
+			</div>
+			<!-- /.col-lg-6 -->
+		</div>
+		<!-- /.row -->
+	</div>
+</div>
+<!-- /#plans.plan -->
+
+
+<style>
+	strong{
+		font-weight: 600;
+	}
+
+	h6{
+		color: #3d60e2;
+	}
+
+	h2{
+		color: #121d46;
+	}
+
+	h5{
+		color: #121d46;
+	}
+
+	.faq{
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-color: #f3f4fc;
+	}
+
+	.note{
+		font-size: 16px;
+		color: #0d0d0d;
+		margin-top: 50px;
+	}
+
+	.note a{
+		color: #7070ff;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.note a:hover{
+		text-decoration: underline;
+	}
+</style>

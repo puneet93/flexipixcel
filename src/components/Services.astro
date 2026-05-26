@@ -1,0 +1,121 @@
+---
+import serviceImage1 from "../assets/service-card-1.png"
+import serviceImage2 from "../assets/service-card-2.png"
+import serviceImage3 from "../assets/service-card-3.png"
+import LightGallery from "./LightGallery.astro"
+---
+
+<div class="services" id="services">
+	<div class="container">
+		<div class="heading text-center">
+			<h6 class="text-uppercase">Boutique Creative services</h6>
+			<h2>Flexible Production, Delivered at Velocity.</h2>
+		</div>
+		<!-- /.heading -->
+
+		<div class="row g-3 justify-content-center">
+			<div class="col-md-4 col-sm-6 col-12">
+				<a href="#" class="service d-flex flex-column">
+					<div class="service-image d-flex align-items-center justify-content-end">
+						<img src={serviceImage1.src} alt="serviceImage1" class="img-fluid" />
+					</div>
+					<!-- /.service-image -->
+
+					<div class="service-info">
+						<h6 class="mb-3 text-uppercase">Social Media & Ads</h6>
+						<h4 class="mb-0">High-Converting Marketing Creatives.</h4>
+					</div>
+					<!-- /.service-info -->
+				</a>
+				<!-- /.service -->
+			</div>
+			<!-- /.col-md-4 col-sm-6 col-12 -->
+			 <div class="col-md-4 col-sm-6 col-12">
+				<a href="#" class="service d-flex flex-column">
+					<div class="service-image d-flex">
+						<img src={serviceImage2.src} alt="serviceImage2" class="img-fluid" />
+					</div>
+					<!-- /.service-image -->
+
+					<div class="service-info">
+						<h6 class="mb-3 text-uppercase">Social Media & Ads</h6>
+						<h4 class="mb-0">High-Converting Marketing Creatives.</h4>
+					</div>
+					<!-- /.service-info -->
+				</a>
+				<!-- /.service -->
+			</div>
+			<!-- /.col-md-4 col-sm-6 col-12 -->
+			 <div class="col-md-4 col-sm-6 col-12">
+				<a href="#" class="service d-flex flex-column">
+					<div class="service-image d-flex align-items-center justify-content-center">
+						<img src={serviceImage3.src} alt="serviceImage3" class="img-fluid" />
+					</div>
+					<!-- /.service-image -->
+
+					<div class="service-info">
+						<h6 class="mb-3 text-uppercase">Social Media & Ads</h6>
+						<h4 class="mb-0">High-Converting Marketing Creatives.</h4>
+					</div>
+					<!-- /.service-info -->
+				</a>
+				<!-- /.service -->
+			</div>
+			<!-- /.col-md-4 col-sm-6 col-12 -->
+		</div>
+		<!-- /.row -->
+
+		<LightGallery />
+	</div>
+</div>
+
+
+<style>
+	.services{
+		padding-bottom: 100px;
+		padding-top: 100px;
+		position: relative;
+	}
+
+	.services .row{
+		margin-bottom: 60px;
+	}
+
+	.heading{
+		margin-bottom: 25px;
+	}
+
+	h6{
+		color: #3d60e2;
+	}
+
+	h2{
+		color: #121d46;
+	}
+
+	.service{
+		transition: all 0.35s linear;
+		background-color: #e9eaf2;
+		text-decoration: none;
+		border-radius: 16px;
+		overflow: hidden;
+		color: #121d46;
+		min-height: 100%;
+	}
+	
+	.service:hover{
+		background-color: #d6d8e1;	
+	}
+
+	.service-info{
+		padding: 0 45px 40px;
+	}
+
+	.service-info h6{
+		color: #5f72bb;
+	}
+
+	.service-image{
+		flex-grow: 1;
+	}
+</style>

@@ -1,0 +1,137 @@
+---
+import heroBG from '../assets/hero-banner-bg.png';
+import heroImage from '../assets/hero-banner-image.png';
+
+import offsetImage1 from '../assets/hero-image-1.png';
+import offsetImage2 from '../assets/hero-image-2.png';
+import offsetImage3 from '../assets/hero-image-3.png';
+import offsetImage4 from '../assets/hero-image-4.png';
+
+import logo1 from '../assets/logo1.png';
+import logo2 from '../assets/logo2.png';
+import logo3 from '../assets/logo3.png';
+import logo4 from '../assets/logo4.png';
+import logo5 from '../assets/logo5.png';
+import logo6 from '../assets/logo6.png';
+import logo7 from '../assets/logo7.png';
+import logo8 from '../assets/logo8.png';
+
+---
+
+<div class="hero-banner" style={`background-image: url(${heroBG.src})`}>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h6 class="text-uppercase">Boutique Creative Infrastructure</h6>
+				<h1>Graphic + Web <br />Design Subscription.</h1>
+				<p>Get high-converting social ads, digital creatives, brand identities, and premium web graphics delivered systematically. One reliable fixed monthly subscription. Cancel anytime.</p>
+				<a href="#" class="btn btn-lg rounded-pill btn-red">Get Started</a>
+			</div>
+			<!-- /.col-md-6 -->
+			<div class="col-md-6 position-relative">
+				<img src={heroImage.src} alt="Hero Image" class="img-fluid hero-banner-image" />
+				<img src={offsetImage3.src} alt="Offset Image 3" class="offset-image-3" />
+			</div>
+			<!-- /.col-md-6 -->
+		</div>
+		<!-- /.row -->
+	</div>
+
+	<img src={offsetImage1.src} alt="Offset Image 1" class="offset-image-1" />
+	<img src={offsetImage2.src} alt="Offset Image 2" class="offset-image-2" />
+	<img src={offsetImage4.src} alt="Offset Image 4" class="offset-image-4" />
+</div>
+
+<div class="brand-logos">
+	<div class="container">
+		<div class="row align-items-center g-3 justify-content-between">
+			<div class="col-auto">
+				<img src={logo1.src} alt="Brand Logo 1" class="img-fluid" />
+			</div>
+			<div class="col-auto">
+				<img src={logo2.src} alt="Brand Logo 2" class="img-fluid" />
+			</div>
+			<div class="col-auto">
+				<img src={logo3.src} alt="Brand Logo 3" class="img-fluid" />
+			</div>
+			<div class="col-auto">
+				<img src={logo4.src} alt="Brand Logo 4" class="img-fluid" />
+			</div>
+			<div class="col-auto">
+				<img src={logo5.src} alt="Brand Logo 5" class="img-fluid" />
+			</div>
+			<div class="col-auto">
+				<img src={logo6.src} alt="Brand Logo 6" class="img-fluid" />
+			</div>
+			<div class="col-auto">
+				<img src={logo7.src} alt="Brand Logo 7" class="img-fluid" />
+			</div>
+			<div class="col-auto">
+				<img src={logo8.src} alt="Brand Logo 8" class="img-fluid" />
+			</div>
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+</div>
+
+<style>
+	.hero-banner{
+		background-position: center;
+		background-size: cover;
+		padding-bottom: 70px;
+		padding-top: 206px;
+		position: relative;
+	}
+
+	h6{
+		color: #91a3e7;
+		margin-top: 30px;
+	}
+
+	h1{
+		color: #fff;
+	}
+
+	p{
+		width: 100%;
+		color: #fff;
+		max-width: 540px;
+		margin-bottom: 1.5em;
+	}
+
+	.hero-banner-image{
+		max-width: 110%;
+		width: 110%;
+	}
+
+	.offset-image-1, .offset-image-2, .offset-image-3, .offset-image-4{
+		position: absolute;
+	}
+
+	.offset-image-1{
+		left: 0;
+		top: 35%;
+	}
+
+	.offset-image-2{
+		left: 43%;
+		bottom: 0;
+	}
+
+	.offset-image-3{
+		bottom: -12%;
+		right: -23%;
+	}
+
+	.offset-image-4{
+		top: 18%;
+		right: 0;
+	}
+
+	.brand-logos{
+		border-bottom: 1px solid #dedfe4;
+		padding-bottom: 60px;
+		padding-top: 60px;
+	}
+</style>

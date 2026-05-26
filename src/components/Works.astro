@@ -1,0 +1,132 @@
+---
+import workIcon1 from "../assets/work-icon-1.png"
+import workIcon2 from "../assets/work-icon-2.png"
+import workIcon3 from "../assets/work-icon-3.png"
+---
+
+<div class="works" id="works">
+	<div class="container">
+		<div class="heading text-center text-sm-start">
+			<h6 class="text-uppercase ">how it works</h6>
+			<h2>Design Workflow, <br />Simplified.</h2>
+		</div>
+		<!-- /.heading -->
+
+		<div class="row g-3 justify-content-center">
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="work d-flex flex-column">
+					<div class="work-image d-flex align-items-center justify-content-center">
+						<img src={workIcon1.src} alt="workIcon1" class="img-fluid" />
+					</div>
+					<!-- /.service-image -->
+
+					<div class="work-info">
+						<h3><sup>01</sup> Submit Your Request.</h3>
+						<p>Submit your brief, share your visual inspiration, and upload your brand assets.</p>
+					</div>
+					<!-- /.service-info -->
+				</div>
+				<!-- /.service -->
+			</div>
+			<!-- /.col-md-4 col-sm-6 col-12 -->
+			 <div class="col-md-4 col-sm-6 col-12">
+				<div class="work d-flex flex-column">
+					<div class="work-image d-flex align-items-center justify-content-center">
+						<img src={workIcon2.src} alt="workIcon2" class="img-fluid" />
+					</div>
+					<!-- /.service-image -->
+
+					<div class="work-info">
+						<h3><sup>02</sup> Submit Your Request.</h3>
+						<p>Submit your brief, share your visual inspiration, and upload your brand assets.</p>
+					</div>
+					<!-- /.service-info -->
+				</div>
+				<!-- /.service -->
+			</div>
+			<!-- /.col-md-4 col-sm-6 col-12 -->
+			 <div class="col-md-4 col-sm-6 col-12">
+				<div class="work d-flex flex-column">
+					<div class="work-image d-flex align-items-center justify-content-center">
+						<img src={workIcon3.src} alt="workIcon3" class="img-fluid" />
+					</div>
+					<!-- /.service-image -->
+
+					<div class="work-info">
+						<h3><sup>03</sup> Submit Your Request.</h3>
+						<p>Submit your brief, share your visual inspiration, and upload your brand assets.</p>
+					</div>
+					<!-- /.service-info -->
+				</div>
+				<!-- /.service -->
+			</div>
+			<!-- /.col-md-4 col-sm-6 col-12 -->
+		</div>
+		<!-- /.row -->
+	</div>
+</div>
+
+
+<style>
+	.works{
+		background-color: #f3f4fc;
+		padding-bottom: 85px;
+		padding-top: 115px;
+		position: relative;
+	}
+
+	.services .row{
+		margin-bottom: 60px;
+	}
+
+	.heading{
+		margin-bottom: 60px;
+	}
+
+	h6{
+		color: #3d60e2;
+	}
+
+	h2{
+		color: #121d46;
+	}
+
+	h3{
+		color: #121d46;
+		font-size: 27px;
+		font-weight: 800;
+		margin-bottom: 16px;
+	}
+
+	sup{
+		top: -0.4em;
+		font-size: 18px;
+		color: #5f72bb;
+		font-weight: 800;
+		margin-right: 12px;
+	}
+
+	.work{
+		transition: all 0.35s linear;
+		background-color: #fff;
+		padding: 40px 40px 50px;
+		text-decoration: none;
+		border-radius: 16px;
+		overflow: hidden;
+		color: #121d46;
+		min-height: 100%;
+	}
+
+	.work-info p{
+		margin-bottom: 0;
+	}
+
+	.work-info h6{
+		color: #5f72bb;
+	}
+
+	.work-image{
+		flex-grow: 1;
+		margin-bottom: 40px;
+	}
+</style>
