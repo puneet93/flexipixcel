@@ -7,15 +7,17 @@ import LightGallery from "./LightGallery.astro"
 
 <div class="services" id="services">
 	<div class="container">
-		<div class="heading text-center">
+		<div class="heading text-center" data-aos="fade-up" data-aos-delay="100">
 			<h6 class="text-uppercase">Boutique Creative services</h6>
 			<h2>Flexible Production, Delivered at Velocity.</h2>
 		</div>
 		<!-- /.heading -->
 
+		<LightGallery />
+
 		<div class="row g-3 justify-content-center">
-			<div class="col-md-4 col-sm-6 col-12">
-				<a href="#" class="service d-flex flex-column">
+			<div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="200">
+				<div class="service d-flex flex-column">
 					<div class="service-image d-flex align-items-center justify-content-end">
 						<img src={serviceImage1.src} alt="serviceImage1" class="img-fluid" />
 					</div>
@@ -26,12 +28,12 @@ import LightGallery from "./LightGallery.astro"
 						<h4 class="mb-0">High-Converting Marketing Creatives.</h4>
 					</div>
 					<!-- /.service-info -->
-				</a>
+				</div>
 				<!-- /.service -->
 			</div>
-			<!-- /.col-md-4 col-sm-6 col-12 -->
-			 <div class="col-md-4 col-sm-6 col-12">
-				<a href="#" class="service d-flex flex-column">
+			<!-- /.col-lg-4 col-sm-6 col-12 -->
+			 <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="400">
+				<div class="service d-flex flex-column">
 					<div class="service-image d-flex">
 						<img src={serviceImage2.src} alt="serviceImage2" class="img-fluid" />
 					</div>
@@ -42,12 +44,12 @@ import LightGallery from "./LightGallery.astro"
 						<h4 class="mb-0">High-Converting Marketing Creatives.</h4>
 					</div>
 					<!-- /.service-info -->
-				</a>
+				</div>
 				<!-- /.service -->
 			</div>
-			<!-- /.col-md-4 col-sm-6 col-12 -->
-			 <div class="col-md-4 col-sm-6 col-12">
-				<a href="#" class="service d-flex flex-column">
+			<!-- /.col-lg-4 col-sm-6 col-12 -->
+			 <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="600">
+				<div class="service d-flex flex-column">
 					<div class="service-image d-flex align-items-center justify-content-center">
 						<img src={serviceImage3.src} alt="serviceImage3" class="img-fluid" />
 					</div>
@@ -58,14 +60,14 @@ import LightGallery from "./LightGallery.astro"
 						<h4 class="mb-0">High-Converting Marketing Creatives.</h4>
 					</div>
 					<!-- /.service-info -->
-				</a>
+				</div>
 				<!-- /.service -->
 			</div>
-			<!-- /.col-md-4 col-sm-6 col-12 -->
+			<!-- /.col-lg-4 col-sm-6 col-12 -->
 		</div>
 		<!-- /.row -->
 
-		<LightGallery />
+		
 	</div>
 </div>
 
@@ -103,9 +105,9 @@ import LightGallery from "./LightGallery.astro"
 		min-height: 100%;
 	}
 	
-	.service:hover{
+	/* .service:hover{
 		background-color: #d6d8e1;	
-	}
+	} */
 
 	.service-info{
 		padding: 0 45px 40px;

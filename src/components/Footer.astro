@@ -8,7 +8,7 @@ import Insta from '../assets/instagram-icon.png';
 <div class="footer">
 	<div class="scaler" style={`background-image: url(${footerBG.src})`}>
 		<div class="container">
-			<div class="heading text-center text-white">
+			<div class="heading text-center text-white" data-aos="fade-up" data-aos-delay="200">
 				<h6 class="text-uppercase">Ready to scale?</h6>
 				<h2>Simplify Your <br />Design Workflow Today.</h2>
 				<p>Secure your dedicated design support and get your first delivery in 24–48 hours. No hidden charges, cancel anytime.</p>
@@ -27,8 +27,7 @@ import Insta from '../assets/instagram-icon.png';
 				</div>
 				<!-- /.footer-logo -->
 
-				<ul class="list-unstyled mb-0 d-flex align-items-center gap-4 flex-wrap">
-					<li><a href="#">Services</a></li>
+				<ul class="list-unstyled mb-0 d-lg-flex d-none align-items-center gap-4 flex-wrap">
 					<li><a href="#">Our Work</a></li>
 					<li><a href="#">How It Works</a></li>
 					<li><a href="#">Pricing</a></li>
@@ -44,8 +43,8 @@ import Insta from '../assets/instagram-icon.png';
 			</div>
 			<!-- /.footer-strip -->
 
-			<div class="row">
-				<div class="col-md-6">
+			<div class="row text-md-start text-center">
+				<div class="col-md-6 mb-md-0 mb-4">
 					<p>© 2026 FlexiPixels. All Rights Reserved.</p>
 				</div>
 				<!-- /.col-md-6 -->
@@ -71,6 +70,10 @@ import Insta from '../assets/instagram-icon.png';
 		padding-bottom: 40px;
 	}
 
+	.footer-bottom a{
+		text-decoration: none !important;
+	}
+
 	.footer-strip{
 		margin-bottom: 30px;
 		margin-top: -40px;
@@ -90,7 +93,6 @@ import Insta from '../assets/instagram-icon.png';
 	}
 
 	.footer-bottom a:hover{
-		text-decoration: underline;
 		color: #7070ff;		
 	}
 
@@ -112,7 +114,7 @@ import Insta from '../assets/instagram-icon.png';
 	}
 
 	h6{
-		color: #3d60e2;
+		color: #91a3e7;
 		margin-bottom: 16px;
 	}
 

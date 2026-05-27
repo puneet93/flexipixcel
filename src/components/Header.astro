@@ -4,8 +4,7 @@ import { Navbar } from 'astro-bootstrap';
 import type { NavbarItemType } from 'astro-bootstrap';
 
 const items: NavbarItemType[] = [
-  { text: 'Services', href: '#services' },
-  { text: 'Our Work', href: '#work' },
+  { text: 'Our Work', href: '#services' },
   { text: 'How It Works', href: '#works' },
   { text: 'Pricing', href: '#plans' },
   { text: 'FAQ', href: '#frequently' },
@@ -17,14 +16,13 @@ const id = 'navbarDemo';
 <Navbar class="navbar-expand-lg fixed-top smart-scroll">
   <div class="container">
     <a class="navbar-brand" href="#"><img src={logo.src} alt="logo" /></a>
-    <Navbar.Toggler controls={id} />
+    <!-- <Navbar.Toggler controls={id} /> -->
+    <div class="navbar-control order-lg-1">
+      <a href="#" class="btn btn-sm rounded-pill btn-lightBlue text-uppercase">login</a>
+      <a href="#" class="btn btn-sm rounded-pill btn-red text-uppercase">Get Started</a>
+    </div>
     <Navbar.Collapse {id}>
       <Navbar.Items {items} class="mx-auto mb-2 mb-lg-0" />
-
-      <div class="navbar-control">
-        <a href="#" class="btn btn-sm rounded-pill btn-lightBlue text-uppercase">login</a>
-        <a href="#" class="btn btn-sm rounded-pill btn-red text-uppercase">Get Started</a>
-      </div>
     </Navbar.Collapse>
   </div>
 </Navbar>
@@ -33,6 +31,12 @@ const id = 'navbarDemo';
   .navbar-control{
     display: flex;
     gap: 14px;
+  }
+
+  @media screen and (max-width: 575px){
+    .navbar-brand img{
+      max-height: 25px;
+    }
   }
 
   /* Initial state: transparent */

@@ -1,68 +1,77 @@
 ---
-// Keep the CSS import in the frontmatter
 import 'lightgallery/css/lightgallery.css';
+
+// 1. Define your data list cleanly
+const works = [
+  { file: 'web-design3.jpg', alt: 'Wellness Product Website Design' },
+  { file: 'logo-1.jpg', alt: 'Dental Clinic Logo Design Concept' },
+  { file: 'app-1.jpg', alt: 'Business Management Dashboard UI Design' },
+  { file: 'web-design5.jpg', alt: 'Luxury Wine Brand Landing Page Concept' },
+  { file: 'leaflet.jpg', alt: 'Healthcare & Wellness Flyer Design' },
+  { file: 'app-2.jpg', alt: 'Property Search Web App UI Design' },
+  { file: 'web-design1.jpg', alt: 'Cold Chain Logistics Website' },
+  { file: 'logo-3.jpg', alt: 'Luxury Property Logo Design' },
+  { file: 'app-4.jpg', alt: 'Customer Tracking & Sales Analytics UI Design' },
+  { file: 'social-1.jpg', alt: 'Social Media Promotion Visuals' },
+  { file: 'brochure-design.jpg', alt: 'Premium Property Investment Brochure Design' },
+  { file: 'app-7.jpg', alt: 'Luxury Real Estate Interactive VR UI Design' },
+  { file: 'web-design2.jpg', alt: 'Healthy Snacks E-Commerce Layout' },
+  { file: 'icon-design.jpg', alt: 'Custom App Component Icon System Design' },
+  { file: 'app-5.jpg', alt: 'Education Web App UI Design' },
+  { file: 'social-2.jpg', alt: 'Digital Marketing Creative Set' },
+  { file: 'web-design4.jpg', alt: 'Education & Learning Center Website' },
+  { file: 'logo-2.jpg', alt: 'Corporate Consultancy Identity Design' },
+  { file: 'app-3.jpg', alt: 'Attoview UI Design' },
+  { file: 'app-6.jpg', alt: 'Digital Collectibles Launch Interface Design' }
+];
+
+// 2. Dynamically fetch all images matching the filenames from your assets directory
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/*.{jpeg,jpg,png,gif}');
+
+// 3. Map filenames to their resolved Astro asset metadata sources
+const galleryItems = await Promise.all(
+  works.map(async (work) => {
+    const path = `../assets/${work.file}`;
+    if (!images[path]) {
+      throw new Error(`"${path}" does not exist in your assets folder!`);
+    }
+    const imageModule = await images[path]();
+    return {
+      src: imageModule.default.src,
+      alt: work.alt
+    };
+  })
+);
 ---
 
-<div id="lightgallery" class="d-none">
-    <a href="https://picsum.photos/id/1015/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 1" src="https://picsum.photos/id/1015/200/150" />
+<div id="lightgallery" style="display: none;">
+  {galleryItems.map((item) => (
+    <a href={item.src} data-sub-html={`<h4>${item.alt}</h4>`}>
+      <img alt={item.alt} src={item.src} />
     </a>
-    <a href="https://picsum.photos/id/1016/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 2" src="https://picsum.photos/id/1016/200/150" />
-    </a>
-    <a href="https://picsum.photos/id/1018/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 3" src="https://picsum.photos/id/1018/200/150" />
-    </a>
-    <a href="https://picsum.photos/id/1019/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 4" src="https://picsum.photos/id/1019/200/150" />
-    </a>
-    <a href="https://picsum.photos/id/1020/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 5" src="https://picsum.photos/id/1020/200/150" />
-    </a>
-    <a href="https://picsum.photos/id/1021/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 6" src="https://picsum.photos/id/1021/200/150" />
-    </a>
-    <a href="https://picsum.photos/id/1022/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 7" src="https://picsum.photos/id/1022/200/150" />
-    </a>
-    <a href="https://picsum.photos/id/1023/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 8" src="https://picsum.photos/id/1023/200/150" />
-    </a>
-    <a href="https://picsum.photos/id/1024/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 9" src="https://picsum.photos/id/1024/200/150" />
-    </a>
-    <a href="https://picsum.photos/id/1025/1600/1200" data-lg-size="1600-1200">
-        <img alt="Work 10" src="https://picsum.photos/id/1025/200/150" />
-    </a>
+  ))}
 </div>
 
-<div class="d-flex justify-content-center mt-4">
-    <a href="#" id="open-gallery-btn" class="btn btn-xl rounded-pill btn-blue">Our work</a>
+<div class="d-flex justify-content-center mt-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+  <button id="open-gallery-btn" class="btn btn-xl rounded-pill btn-blue">Our work</button>
 </div>
 
 <script>
-    // JS import remains in the client-side script tag
-    import lightGallery from 'lightgallery';
+  import lightGallery from 'lightgallery';
 
-    const galleryElement = document.getElementById('lightgallery');
-    const openButton = document.getElementById('open-gallery-btn');
-    
-    if (galleryElement && openButton) {
-        // Initialize lightGallery on the hidden container
-        lightGallery(galleryElement, {
-            speed: 500,
-            download: false
-        });
+  const galleryElement = document.getElementById('lightgallery');
+  const openButton = document.getElementById('open-gallery-btn');
+  
+  if (galleryElement && openButton) {
+    const instance = lightGallery(galleryElement, {
+      speed: 500,
+      download: false,
+      selector: 'a'
+    });
 
-        // Listen for the button click
-        openButton.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevents the page from jumping to the top due to href="#"
-            
-            // Programmatically click the first image in the hidden gallery to trigger the popup
-            const firstImage = galleryElement.querySelector('a');
-            if (firstImage) {
-                firstImage.click();
-            }
-        });
-    }
+    openButton.addEventListener('click', () => {
+      // Programmatically open the lightgallery instance at index 0
+      instance.openGallery(0);
+    });
+  }
 </script>

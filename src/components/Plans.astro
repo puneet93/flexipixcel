@@ -5,7 +5,7 @@ import checkGreen from '../assets/check-green.png';
 import checkGray from '../assets/check-gray.png';
 ---
 
-<div class="testimonial-area">
+<div class="testimonial-area" data-aos="fade-up" data-aos-delay="200">
 	<div class="container">
 		<div class="d-flex justify-content-center"><img src={quote.src} alt="quote" /></div>
 
@@ -18,14 +18,14 @@ import checkGray from '../assets/check-gray.png';
 
 <div class="plan" id="plans">
 	<div class="container">
-		<div class="heading text-center">
+		<div class="heading text-center" data-aos="fade-up" data-aos-delay="200">
 			<h6 class="text-uppercase">All-inclusive plans</h6>
 			<h2>Simple Flat-Rate Plans.</h2>
 		</div>
 		<!-- /.heading -->
 
 		<div class="row g-4">
-			<div class="col-md-6">
+			<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
 				<div class="plan-card d-flex flex-column">
 					<div>
 						<h4 class="mb-3">Standard Production.</h4>
@@ -63,8 +63,9 @@ import checkGray from '../assets/check-gray.png';
 				<!-- /.plan-card -->
 			</div>
 			<!-- /.col-md-6 -->
-			<div class="col-md-6">
-				<div class="plan-card d-flex flex-column">
+			<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+				<div class="plan-card plan-card-popular d-flex flex-column">
+					<span class="plan-card-pill">Most popular</span>
 					<div>
 						<h4 class="mb-3">Advanced Production.</h4>
 						<p class="mb-0">Ideal for scaling businesses needing high-fidelity web design, complex layouts, and priority execution.</p>
@@ -153,12 +154,36 @@ import checkGray from '../assets/check-gray.png';
 		padding-bottom: 140px;
 	}
 
+	.plan-card-popular{
+		border: 1px solid #ed145b;
+	}
+
 	.plan-card{
 		gap: 30px;
 		height: 100%;
+		position: relative;
 		border-radius: 16px;
 		padding: 42px 60px 60px;
 		background-color: #f3f4fc;
+	}
+
+	.plan-card-pill{
+		top: -16px;
+		left: 60px;
+		font-size: 13px;
+		font-weight: 600;
+		padding: 5px 12px;
+		color: #ed145b;
+		position: absolute;
+		border-radius: 5px;
+		letter-spacing: 0.02em;
+		background-color: #fff;
+		text-transform: uppercase;
+		border: 1px solid #ed145b;
+	}
+
+	.plan-card:hover{
+		background-color: #d6d8e1;	
 	}
 
 	.plan-card ul{
@@ -185,5 +210,15 @@ import checkGray from '../assets/check-gray.png';
 
 	.note a:hover{
 		text-decoration: underline;
+	}
+
+	@media screen and (max-width: 1199px){
+		.plan-card{
+			padding: 35px 20px 20px;
+		}
+
+		.plan-card-pill{
+			left: 20px;
+		}
 	}
 </style>
