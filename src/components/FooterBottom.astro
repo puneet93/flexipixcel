@@ -1,0 +1,111 @@
+---
+import footerLogo from '../assets/footer-logo.png';
+import dribbble from '../assets/dribbble.png';
+---
+
+<div class="footer-bottom">
+	<div class="container">
+		<div class="footer-strip d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
+			<div class="footer-logo">
+				<img src={footerLogo.src} alt="Footer Logo" />
+			</div>
+			<!-- /.footer-logo -->
+
+			<ul class="list-unstyled mb-0 d-lg-flex d-none align-items-center gap-4 flex-wrap">
+				<li><a href="#services">Our Work</a></li>
+				<li><a href="#works">How It Works</a></li>
+				<li><a href="#plans">Pricing</a></li>
+				<li><a href="#frequently">FAQ</a></li>
+			</ul>
+
+			<div class="footer-control d-flex align-items-center gap-4">
+				<a href="mailto:hello@flexipixels.com">hello@flexipixels.com</a>
+				<a href="#"><img src={dribbble.src} alt="dribbble" /></a>
+				<!-- <a href="#"><img src={Insta.src} alt="Instagram" /></a> -->
+			</div>
+			<!-- /.footer-control -->
+		</div>
+		<!-- /.footer-strip -->
+
+		<div class="row text-md-start text-center">
+			<div class="col-md-6 mb-md-0 mb-4">
+				<p>© 2026 FlexiPixels. All Rights Reserved.</p>
+			</div>
+			<!-- /.col-md-6 -->
+			<div class="col-md-6 d-flex justify-content-md-end justify-content-center gap-4">
+				<a href="#">Terms of Service</a>
+				<a href="#">Privacy Policy</a>
+			</div>
+			<!-- /.col-md-6 -->
+		</div>
+		<!-- /.row -->		
+	</div>
+</div>
+
+
+<style>
+	.footer-bottom{
+		font-size: 15px;
+		padding-bottom: 40px;
+	}
+
+	.footer-bottom a{
+		text-decoration: none !important;
+	}
+
+	.footer-strip{
+		margin-bottom: 30px;
+		margin-top: -40px;
+	}
+
+	.footer-strip li a{
+		color: #121d46;
+	}
+
+	.footer-strip li a:hover{
+		color: #91a3e7;
+	}
+	
+	.footer-bottom p, .footer-bottom a{
+		color: #a7a8bc;
+		margin-bottom: 0;
+	}
+
+	.footer-bottom a{
+		color: #121d46;
+		text-decoration: none;
+	}
+
+	.footer-bottom a:hover{
+		color: #7070ff;		
+	}
+
+	strong{
+		font-weight: 600;
+	}
+
+	h6{
+		color: #91a3e7;
+		margin-bottom: 16px;
+	}
+
+	h2{
+		color: #fff;
+		font-size: 45px;
+		margin-bottom: 20px;
+	}
+
+	p{
+		margin-bottom: 30px;
+	}
+
+	h5{
+		color: #121d46;
+	}
+
+	.footer-strip{
+		background-color: #fff;
+		border-radius: 16px;
+		padding: 50px 45px;
+	}
+</style>

@@ -1,69 +1,19 @@
 ---
-import quote from "../assets/quotes.png"
-import heroBG from '../assets/testimonial-bg.png';
 import checkGreen from '../assets/check-green.png';
 import checkGray from '../assets/check-gray.png';
 ---
 
-<div class="testimonial-area" data-aos="fade-up" data-aos-delay="200">
-	<div class="container">
-		<div class="d-flex justify-content-center"><img src={quote.src} alt="quote" /></div>
-
-		<div class="testimonial text-center text-white d-flex align-items-center justify-content-center" style={`background-image: url(${heroBG.src})`}>
-			<p>“We <strong>limit our active client roster</strong> to guarantee your business gets dependable daily momentum, straightforward communication, and direct senior-level execution.”</p>
-		</div>
-	</div>
-</div>
-
 
 <div class="plan" id="plans">
 	<div class="container">
-		<div class="heading text-center" data-aos="fade-up" data-aos-delay="200">
+		<div class="heading mb-5 text-center" data-aos="fade-up" data-aos-delay="200">
 			<h6 class="text-uppercase">All-inclusive plans</h6>
 			<h2>Simple Flat-Rate Plans.</h2>
 		</div>
 		<!-- /.heading -->
 
 		<div class="row g-4">
-			<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-				<div class="plan-card d-flex flex-column">
-					<div>
-						<h4 class="mb-3">Standard Production.</h4>
-						<p class="mb-0">Ideal for steady marketing assets, ongoing brand collateral, and quick design updates.</p>
-					</div>
-
-					<div class="d-flex align-items-end">
-						<h2 class="mb-0">$000</h2> <p class="mb-2 ms-2">/month</p>
-					</div>
-
-					<ul class="list-unstyled d-flex flex-column gap-1 mb-4">
-						<li><img src={checkGreen.src} alt="checkGreen" /> <span>1 active request at a time</span></li>
-						<li><img src={checkGreen.src} alt="checkGreen" /> <span>Unlimited requests & revisions</span></li>
-						<li><img src={checkGreen.src} alt="checkGreen" /> <span>24–48h delivery turnaround</span></li>
-						<li><img src={checkGreen.src} alt="checkGreen" /> <span>Premium stock images included</span></li>
-						<li><img src={checkGreen.src} alt="checkGreen" /> <span>Private Trello dashboard</span></li>
-					</ul>
-
-					<div>
-						<h5 class="mb-3">Design Services:</h5>
-						<ul class="list-unstyled d-flex flex-column gap-1 mb-4">
-							<li><img src={checkGreen.src} alt="checkGreen" /> <span>Social Media Ads & Graphics</span></li>
-							<li><img src={checkGreen.src} alt="checkGreen" /> <span>Logos, Icons & Brand Identities</span></li>
-							<li><img src={checkGreen.src} alt="checkGreen" /> <span>Email, Flyers, Brochures & Banners</span></li>
-							<li><img src={checkGreen.src} alt="checkGreen" /> <span>Infographics & Presentations</span></li>
-							<li style={{color: "#a7aac0"}}><img src={checkGray.src} alt="checkGray" /> <span>Websites & Landing Pages</span></li>
-						</ul>
-					</div>
-
-					<div class="mt-auto">
-						<a href="#" class="btn btn-lg rounded-pill btn-red">Get Started</a>
-					</div>
-
-				</div>
-				<!-- /.plan-card -->
-			</div>
-			<!-- /.col-md-6 -->
-			<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+			<div class="col-md-6 order-md-1" data-aos="fade-up" data-aos-delay="400">
 				<div class="plan-card plan-card-popular d-flex flex-column">
 					<span class="plan-card-pill">Most popular</span>
 					<div>
@@ -96,8 +46,46 @@ import checkGray from '../assets/check-gray.png';
 						<p class="note">*Need it built? Development integration available upon <a href="#">request</a>.</p>
 					</div>
 
-					<div class="mt-auto">
-						<a href="#" class="btn btn-lg rounded-pill btn-red">Get Started</a>
+					<div class="mt-auto text-center text-md-start">
+						<a href="/#plans" class="btn btn-lg rounded-pill btn-red">Get Started</a>
+					</div>
+
+				</div>
+				<!-- /.plan-card -->
+			</div>
+			<!-- /.col-md-6 -->
+			<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+				<div class="plan-card d-flex flex-column">
+					<div>
+						<h4 class="mb-3">Standard Production.</h4>
+						<p class="mb-0">Ideal for steady marketing assets, ongoing brand collateral, and quick design updates.</p>
+					</div>
+
+					<div class="d-flex align-items-end">
+						<h2 class="mb-0">$000</h2> <p class="mb-2 ms-2">/month</p>
+					</div>
+
+					<ul class="list-unstyled d-flex flex-column gap-1 mb-4">
+						<li><img src={checkGreen.src} alt="checkGreen" /> <span>1 active request at a time</span></li>
+						<li><img src={checkGreen.src} alt="checkGreen" /> <span>Unlimited requests & revisions</span></li>
+						<li><img src={checkGreen.src} alt="checkGreen" /> <span>24–48h delivery turnaround</span></li>
+						<li><img src={checkGreen.src} alt="checkGreen" /> <span>Premium stock images included</span></li>
+						<li><img src={checkGreen.src} alt="checkGreen" /> <span>Private Trello dashboard</span></li>
+					</ul>
+
+					<div>
+						<h5 class="mb-3">Design Services:</h5>
+						<ul class="list-unstyled d-flex flex-column gap-1 mb-4">
+							<li><img src={checkGreen.src} alt="checkGreen" /> <span>Social Media Ads & Graphics</span></li>
+							<li><img src={checkGreen.src} alt="checkGreen" /> <span>Logos, Icons & Brand Identities</span></li>
+							<li><img src={checkGreen.src} alt="checkGreen" /> <span>Email, Flyers, Brochures & Banners</span></li>
+							<li><img src={checkGreen.src} alt="checkGreen" /> <span>Infographics & Presentations</span></li>
+							<li style={{color: "#a7aac0"}}><img src={checkGray.src} alt="checkGray" /> <span>Websites & Landing Pages</span></li>
+						</ul>
+					</div>
+
+					<div class="mt-auto text-center text-md-start">
+						<a href="/#plans" class="btn btn-lg rounded-pill btn-red">Get Started</a>
 					</div>
 
 				</div>
@@ -112,20 +100,6 @@ import checkGray from '../assets/check-gray.png';
 
 
 <style>
-	.testimonial-area{
-		padding-top: 85px;
-		padding-bottom: 70px;
-	}
-
-	.testimonial{
-		object-position: right center;
-		border-radius: 16px;
-		object-fit: cover;
-		margin-top: -18px;
-		min-height: 360px;
-		padding: 15px;
-	}
-
 	strong{
 		font-weight: 600;
 	}
@@ -140,13 +114,6 @@ import checkGray from '../assets/check-gray.png';
 
 	h5{
 		color: #121d46;
-	}
-
-	.testimonial p{
-		font-style: italic;
-		max-width: 720px;
-		font-size: 24px;
-		width: 100%;
 	}
 
 	.plan{
@@ -182,9 +149,9 @@ import checkGray from '../assets/check-gray.png';
 		border: 1px solid #ed145b;
 	}
 
-	.plan-card:hover{
+	/* .plan-card:hover{
 		background-color: #d6d8e1;	
-	}
+	} */
 
 	.plan-card ul{
 		font-size: 18px;
@@ -219,6 +186,10 @@ import checkGray from '../assets/check-gray.png';
 
 		.plan-card-pill{
 			left: 20px;
+		}
+
+		.plan{
+			padding-bottom: 60px;
 		}
 	}
 </style>
